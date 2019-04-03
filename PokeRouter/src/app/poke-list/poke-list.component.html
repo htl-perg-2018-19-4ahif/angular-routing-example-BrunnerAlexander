@@ -1,0 +1,7 @@
+<h1> Pokemon List </h1>
+
+<input type="text" [(ngModel)]="filter" (change)="fetchPokemons()" />
+
+<ul>
+  <li *ngFor = "let pokemon of pokemonList"> <a routerLink="/pokemon/{{pokemon.id + 1}}">{{pokemon.name}}</a></li>
+</ul>
